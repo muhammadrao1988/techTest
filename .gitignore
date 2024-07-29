@@ -1,0 +1,8 @@
+# vscode
+.vscode/
+
+# misc
+backend/.idea/*
+frontend/.idea/*
+.idea/*
+backend/app/storage/*
