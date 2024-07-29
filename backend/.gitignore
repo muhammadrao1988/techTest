@@ -1,19 +1,15 @@
 # dependencies
-/node_modules
-/vendor
-/storage
+laravel/node_modules
+laravel/vendor
+laravel/storage
 
 # misc
 .DS_Store
 *.pem
 
-#editor
-.idea
-.vscode
-
 #environment
-.env
+laravel/.env
 
 #packages lock
-package-lock.json
-composer.lock
+laravel/package-lock.json
+laravel/composer.lock
