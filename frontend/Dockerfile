@@ -6,7 +6,7 @@ ENV NODE_ENV development
 
 WORKDIR /app
 
-COPY ./nextjs-app/package*.json ./
+COPY ./react-app/package*.json ./
 
 # Install dependencies
 RUN npm install --no-cache

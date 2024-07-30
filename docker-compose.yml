@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: laravel
     volumes:
-      - ./backend:/var/www
+      - ./backend/laravel/:/var/www
     ports:
       - "8000:8000"
   frontend:
@@ -16,7 +16,6 @@ services:
     container_name: react
     volumes:
       - ./frontend/react-app:/app
-      - /app/node_modules
     ports:
       - "3000:3000"
     environment:
