@@ -9,6 +9,8 @@ services:
       - ./backend/laravel/:/var/www
     ports:
       - "8000:8000"
+    depends_on:
+      - mysql
   frontend:
     build:
       context: ./frontend
@@ -20,3 +22,19 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=development
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: 1
+      MYSQL_DATABASE: tech_test
+      MYSQL_USER: tech_Test
+      MYSQL_PASSWORD: muhammad
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql-data:
